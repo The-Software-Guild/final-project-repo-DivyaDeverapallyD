@@ -25,7 +25,7 @@ var options = ["1", "2", "3", "4", "5"];
     
        $.ajax({
         type: 'GET',
-        url: 'https://api.themoviedb.org/3/genre/movie/list?api_key=a43ff9e46e3ddf9784f4b349514f7e2a&language=en-US',
+        url: 'https://api.themoviedb.org/3/genre/movie/list?api_key={API-Key}&language=en-US',
          success: function(allGenres) {
             $.each(allGenres.genres, function(index, movie){
                 var mId= movie.id;
@@ -68,7 +68,7 @@ function getMoviesOfGenre(){
    var genreRow = $('#genreRows');
        $.ajax({
         type: 'GET',
-        url: `https://api.themoviedb.org/3/discover/movie?api_key=a43ff9e46e3ddf9784f4b349514f7e2a&withgenres=${gId}`,
+        url: `https://api.themoviedb.org/3/discover/movie?api_key={API-Key}&withgenres=${gId}`,
          success: function(allMovies) {
             $.each(allMovies.results, function(index, movie){
                 var mId= movie.id;
