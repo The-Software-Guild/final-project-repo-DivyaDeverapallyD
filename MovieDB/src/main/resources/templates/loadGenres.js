@@ -18,7 +18,7 @@ function getMoviesOfGenre(){
    var genreRow = $('#genreRows');
        $.ajax({
         type: 'GET',
-        url: 'https://api.themoviedb.org/3/discover/movie?api_key=a43ff9e46e3ddf9784f4b349514f7e2a&withgenres=16',
+        url: 'https://api.themoviedb.org/3/discover/movie?api_key={API-Key}&withgenres=16',
          success: function(allMovies) {
             $.each(allMovies.results, function(index, movie){
                 var mId= movie.id;
